@@ -19,6 +19,16 @@
     --size-h3: 20px;
     --size-h4: 14px;
 }
+body[data-theme="light"] {
+    --bg-color: var(--white);
+}
+body[data-theme="dark"] {
+    --bg-color: var(--midnight);
+}
+
+body {
+    background-color: var(--bg-color);
+}
 .container{
     width: 100%;
 }
@@ -31,20 +41,26 @@
 }
 #theme-btn{
     display: none;
+    cursor: pointer;
 }
 #theme-label{
     width: 48px;
     height: 24px;
-    padding: 4px;
+    padding: 5px;
     border-radius: 999px;
     background-color: var(--white);
     display: inline-block;
 }
-#theme-label::before{
+#theme-label::after{
     content: '';
-    width: 12px;
-    height: 12px;
+    display: inline-block;
+    width: 14px;
+    height: 14px;
     border-radius: 50%;
-    background-color: var(--midnight);
-    display: block;
+    background-color: rgba(89, 100, 224, 1);
+    position: absolute;
+    transition: transform 0.3s;
+}
+#theme-label:has(input:checked)::after{
+    transform: translateX(24px);
 }
