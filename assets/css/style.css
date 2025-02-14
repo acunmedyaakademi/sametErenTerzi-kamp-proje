@@ -1,0 +1,25 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --violet:#9e7f66;
+    --lightViolet: #939BF4;
+    --veryDarkBlue: #19202D;
+    --midnight: #121721;
+    --white: #fff;
+    --lightGrey: #F4F6F8;
+    --gray: #9DAEC2;
+    --darkGrey: #6E8098;
+}
+.container{
+    width: 100%;
+}
+.header{
+    background-color: rgba(89, 100, 224, 1);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 32px 24px;
+}
