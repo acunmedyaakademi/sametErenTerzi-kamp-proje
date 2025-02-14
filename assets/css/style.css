@@ -10,7 +10,7 @@
 :root{
     --violet:#9e7f66;
     --lightViolet: #939BF4;
-    --veryDarkBlue: #19202D;
+    --veryDarkBlue: #242d3d;
     --midnight: #121721;
     --white: #fff;
     --lightGrey: #F4F6F8;
@@ -24,10 +24,14 @@
 
 body[data-theme="light"] {
     --bg-color: var(--lightGrey);
+    --details-bg: var(--white);
+    --title-color: var(--veryDarkBlue);
 }
 
 body[data-theme="dark"] {
     --bg-color: var(--midnight);
+    --details-bg: var(--veryDarkBlue);
+    --title-color: var(--white);
 }
 
 body {
@@ -117,7 +121,7 @@ body {
 }
 .company-details{
     margin: 57px 24px;
-    background-color: var(--bg-color);
+    background-color: var(--details-bg);
     width: 327px;
     border-radius: 6px;
 }
@@ -142,7 +146,7 @@ body {
     font-weight: 700;
     font-size: 20px;
     line-height: 24.8px;
-    color: #19202D;
+    color: var(--title-color);
 }
 .company-details .company-scoot h3{
     font-weight: 400;
@@ -172,4 +176,60 @@ body {
     padding: 16px 40px;
     border-radius: 5px;
     color: white;
+}
+@media (width > 768px){
+    .header{
+        background-color: rgba(89, 100, 224, 1);
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        padding: 32px 24px;
+    }
+    .search-container{
+        display: flex;
+        justify-content: space-between;
+        padding: 31px 24px;
+        margin-inline: auto;
+        width: 689px;
+        height: 80px;
+        background-color: var(--white);
+        border-radius: 6px;
+    }
+    .company-container{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .load-more-div{
+        margin-left: 307px;
+        margin-bottom: 62px;
+        width: 327px;
+    }
+}
+@media (width > 1200px){
+    .header{
+        background-color: rgba(89, 100, 224, 1);
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        padding: 32px 24px;
+    }
+    .search-container{
+        display: flex;
+        justify-content: space-between;
+        padding: 31px 24px;
+        margin-inline: auto;
+        width: 1110px;
+        height: 80px;
+        background-color: var(--white);
+        border-radius: 6px;
+    }
+    .company-container{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    .load-more-div{
+        margin-left: 649px;
+        margin-bottom: 62px;
+        width: 327px;
+    }
 }
