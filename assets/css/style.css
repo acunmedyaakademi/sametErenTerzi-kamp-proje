@@ -4,7 +4,9 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Kumbh Sans', sans-serif;
 }
+
 :root{
     --violet:#9e7f66;
     --lightViolet: #939BF4;
@@ -19,16 +21,20 @@
     --size-h3: 20px;
     --size-h4: 14px;
 }
+
 body[data-theme="light"] {
     --bg-color: var(--lightGrey);
 }
+
 body[data-theme="dark"] {
     --bg-color: var(--midnight);
 }
 
 body {
     background-color: var(--bg-color);
+    font-family: 'Kumbh Sans', sans-serif;
 }
+
 .container{
     width: 100%;
 }
@@ -106,9 +112,12 @@ body {
     color: white;
     cursor: pointer;
 }
+.company-container{
+    background-color: var(--bg-color);
+}
 .company-details{
     margin: 57px 24px;
-    background-color: var(--white);
+    background-color: var(--bg-color);
     width: 327px;
     border-radius: 6px;
 }
@@ -151,4 +160,16 @@ body {
     margin-left: 32px;
     padding-bottom: 33px;
     color: #5964E0;
+}
+.load-more-div{
+    margin-left: 117px;
+    margin-bottom: 62px;
+    width: 327px;
+}
+.load-more-btn{
+    background-color: #5964E0;
+    border: none;
+    padding: 16px 40px;
+    border-radius: 5px;
+    color: white;
 }
